@@ -88,7 +88,7 @@ function App() {
             </button>
 
             <div className="mt-4 text-sm text-gray-500 text-center">
-              Version 1.0.0 • Ready for download
+              Version 2.0.0 • Ready for download
             </div>
           </div>
 
