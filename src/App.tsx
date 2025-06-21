@@ -9,14 +9,10 @@ function App() {
     // Simulate download process
     setTimeout(() => {
       setIsDownloading(false);
-      // Create a download link for the APK file in the public directory
-      const link = document.createElement('a');
-      link.href = '/TrackMyExpiry.apk';
-      link.download = 'TrackMyExpiry.apk';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }, 2000);
+      // Direct download from Google Drive
+      const googleDriveDownloadUrl = 'https://drive.google.com/uc?export=download&id=1gelLXxnf05MJYpjtcATjeboywr7iLfou';
+      window.open(googleDriveDownloadUrl, '_blank');
+    }, 1500);
   };
 
   return (
@@ -66,7 +62,7 @@ function App() {
             </div>
             
             <p className="text-gray-600 mb-6">
-              Click the button below to download the TrackMyExpiry APK file to your Android device.
+              Click the button below to download the TrackMyExpiry APK file directly from our secure cloud storage.
             </p>
 
             <button
@@ -88,7 +84,7 @@ function App() {
             </button>
 
             <div className="mt-4 text-sm text-gray-500 text-center">
-              Version 2.0.0 • Ready for download
+              Version 2.0.0 • Hosted on Google Drive
             </div>
           </div>
 
@@ -140,9 +136,9 @@ function App() {
             <div>
               <h4 className="font-semibold text-amber-900 mb-2">Security Notice</h4>
               <p className="text-amber-800 text-sm leading-relaxed">
-                This APK is provided directly by the TrackMyExpiry team. Installing apps from unknown sources 
-                can be risky. Only download from trusted sources and ensure you have enabled installation 
-                from unknown sources in your device settings.
+                This APK is provided directly by the TrackMyExpiry team and hosted on Google Drive for secure delivery. 
+                Installing apps from unknown sources can be risky. Only download from trusted sources and ensure you have 
+                enabled installation from unknown sources in your device settings.
               </p>
             </div>
           </div>
